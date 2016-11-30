@@ -1,4 +1,5 @@
 import encode
+import wave
 
 # TODO: Support other formats and settings
 
@@ -6,7 +7,6 @@ import encode
 def save_wave(data, path, rate=44100):
   ''' Save audio data to wave file, currently only 16bit
   '''
-  import wave
   fp = wave.open(path, 'w')
   fp.setnchannels(1)
   fp.setframerate(rate)
