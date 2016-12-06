@@ -77,8 +77,8 @@ class Chord:
     prog = []
     for root in scale:
       root = root.transpose(12 * base_octave)
-      third = scale.transpose(root, 2)
-      fifth = scale.transpose(root, 4)
+      third = root.transpose(4)
+      fifth = third.transpose(3)
       prog.append(cls((root, third, fifth)))
     return prog
 
